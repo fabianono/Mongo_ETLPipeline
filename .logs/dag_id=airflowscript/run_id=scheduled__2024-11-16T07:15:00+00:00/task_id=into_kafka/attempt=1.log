@@ -1,0 +1,41 @@
+[2024-11-16T07:24:40.860+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-16T07:24:40.891+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: airflowscript.into_kafka scheduled__2024-11-16T07:15:00+00:00 [queued]>
+[2024-11-16T07:24:40.904+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: airflowscript.into_kafka scheduled__2024-11-16T07:15:00+00:00 [queued]>
+[2024-11-16T07:24:40.905+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-11-16T07:24:40.927+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): into_kafka> on 2024-11-16 07:15:00+00:00
+[2024-11-16T07:24:40.936+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '***script', 'into_kafka', 'scheduled__2024-11-16T07:15:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/***script.py', '--cfg-path', '/tmp/tmp9_j2w70k']
+[2024-11-16T07:24:40.946+0000] {standard_task_runner.py:105} INFO - Job 2: Subtask into_kafka
+[2024-11-16T07:24:40.948+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=180) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-11-16T07:24:40.949+0000] {standard_task_runner.py:72} INFO - Started process 181 to run task
+[2024-11-16T07:24:41.045+0000] {task_command.py:467} INFO - Running <TaskInstance: airflowscript.into_kafka scheduled__2024-11-16T07:15:00+00:00 [running]> on host 5a5cd077126a
+[2024-11-16T07:24:41.213+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Russell Westbrook' AIRFLOW_CTX_DAG_ID='***script' AIRFLOW_CTX_TASK_ID='into_kafka' AIRFLOW_CTX_EXECUTION_DATE='2024-11-16T07:15:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-11-16T07:15:00+00:00'
+[2024-11-16T07:24:41.214+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-16T07:24:41.304+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-11-16T07:24:41.305+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/main/kafkascript.py']
+[2024-11-16T07:24:41.321+0000] {subprocess.py:86} INFO - Output:
+[2024-11-16T07:24:43.750+0000] {subprocess.py:93} INFO - {
+[2024-11-16T07:24:43.751+0000] {subprocess.py:93} INFO -     "gender": "female",
+[2024-11-16T07:24:43.753+0000] {subprocess.py:93} INFO -     "name": {
+[2024-11-16T07:24:43.754+0000] {subprocess.py:93} INFO -         "title": "Mrs",
+[2024-11-16T07:24:43.756+0000] {subprocess.py:93} INFO -         "firstname": "Nicky",
+[2024-11-16T07:24:43.756+0000] {subprocess.py:93} INFO -         "lastname": "Wilson"
+[2024-11-16T07:24:43.757+0000] {subprocess.py:93} INFO -     },
+[2024-11-16T07:24:43.758+0000] {subprocess.py:93} INFO -     "dob": "1945-03-15T18:42:53.071Z",
+[2024-11-16T07:24:43.759+0000] {subprocess.py:93} INFO -     "address": {
+[2024-11-16T07:24:43.766+0000] {subprocess.py:93} INFO -         "main": "2452 New Street",
+[2024-11-16T07:24:43.767+0000] {subprocess.py:93} INFO -         "postalcode": "OT4D 5GR",
+[2024-11-16T07:24:43.768+0000] {subprocess.py:93} INFO -         "city": "Wolverhampton",
+[2024-11-16T07:24:43.769+0000] {subprocess.py:93} INFO -         "state": "Tayside",
+[2024-11-16T07:24:43.770+0000] {subprocess.py:93} INFO -         "country": "United Kingdom"
+[2024-11-16T07:24:43.771+0000] {subprocess.py:93} INFO -     },
+[2024-11-16T07:24:43.772+0000] {subprocess.py:93} INFO -     "contact": {
+[2024-11-16T07:24:43.772+0000] {subprocess.py:93} INFO -         "email": "nicky.wilson@example.com",
+[2024-11-16T07:24:43.773+0000] {subprocess.py:93} INFO -         "phone": "016974 37920"
+[2024-11-16T07:24:43.774+0000] {subprocess.py:93} INFO -     }
+[2024-11-16T07:24:43.775+0000] {subprocess.py:93} INFO - }
+[2024-11-16T07:24:43.837+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-11-16T07:24:43.874+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-16T07:24:43.875+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=***script, task_id=into_kafka, run_id=scheduled__2024-11-16T07:15:00+00:00, execution_date=20241116T071500, start_date=20241116T072440, end_date=20241116T072443
+[2024-11-16T07:24:43.899+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-16T07:24:43.925+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-16T07:24:43.927+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
